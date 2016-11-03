@@ -2,8 +2,8 @@ sftp:
  container_name: sftp
  image: nfqsolutions/sftp
  volumes:
-  - FTP_FOLDER:/home/foo/share
+  - FTP_FOLDER:/home/foo/inputs
   - PUBLIC_KEY_FOLDER:/home/foo/.ssh/keys/id_rsa.pub:ro
  ports:
   - "2222:22"
-  command: foo::1001
+ command: foo::1001

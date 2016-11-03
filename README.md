@@ -140,3 +140,17 @@ bindmount /data/common /home/dave/common
 bindmount /data/common /home/peter/common
 bindmount /data/docs /home/peter/docs --read-only
 ```
+
+
+## EXAMPLE OF DOCKER-COMPOSE USING KEY AND JUAN USER
+```
+sftp:
+ container_name: sftp
+ image: nfqsolutions/sftp
+ volumes:
+  - /opt/inputs:/home/juan/inputs
+  - /opt/keys/juan.pub:/home/juan/.ssh/keys/juan.pub
+ ports:
+  - "2222:22"
+ command: juan::1001
+```
