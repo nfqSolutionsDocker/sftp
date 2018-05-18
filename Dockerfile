@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:jessie
 MAINTAINER Manuel Iglesias
 
 # - Install packages
